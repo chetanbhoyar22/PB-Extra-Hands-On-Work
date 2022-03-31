@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Fourth Day (JS)</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <strong>
+            <h2>Decision Making</h2>
+            <h4>1. if</h4>
+            <p>When we want to take 1 conditions then we are going to prefer if condition.</p>
+            <h4>2. if...else</h4>
+            <p>When we want to take 2 conditions then we are going to prefer if-else condition.</p>
+            <h4>3. if...else...if</h4>
+            <p>When we want to take more than 2 conditions then we are going to prefer if-else-if condition.</p>
+            <h4>4. switch statement</h4>
+            <p>When we want to take more than 3 conditions then we are going to prefer switch-case condition. & without break statement , it prints all statements.</p>
+            <h4>Note - Example are executed in js file.</h4><br/>
+            <h2>JS Day 4 Tasks</h2>
+        </strong>
+    </div>
+    <h4>Q 1 : Explain the difference between var let and const , explain with example?</h4>
+    <p><strong>1. var</strong><br/>
+        var is a Global or Functional Scoped. <br/>
+        var can be reassigned. <br/>
+        var can be redeclare. <br/>
+        var can be modified later.<br/><br/>
+        <strong>Example -</strong><br/>
+        <pre>
+            var a=10;
+            var a=20;
+            console.log(a); //It will assign last value of 'a' variable
+            
+            Output - 20
+        </pre>
+
+        <strong>2. let</strong><br/>
+        let  is a Block  Scoped. <br/>
+        let cannot be reassigned. <br/> 
+        let cannot be redeclare.  <br/>
+        let can be modified later.<br/><br/>
+        <strong>Example -</strong><br/>
+        <pre>
+            let a=10;
+            let a=20;      //We cannot redeclare
+            console.log(a);
+
+            Output - Error 
+
+            let a=10;    
+            a=20;
+            console.log(a);   //we can modify like this
+
+            Output - 20 
+       </pre>
+
+        <strong>3. const</strong><br/>
+        const is a Block  Scoped. <br/>
+        const cannot be reassigned. <br/>
+        const cannot be redeclare. <br/>
+        const cannot be modified later.</p>
+        <strong>Example -</strong><br/>
+        <pre>
+            const a=10;
+            a=20;
+            console.log(a);  
+
+            Output - Throws error that assigned to fixed value, cannot modified.
+        </pre>
+
+
+    <h4>Q 2 : Explain JS execution?</h4>
+    <p>Javascript execution context is divided into two parts -<br/><br/>
+        1. Creation Phase<br/>
+        2. Execution Phase<br/><br/>
+    
+        1.Creation Phase - <br/>
+        This is the initial phase of Global execution content.Here all variables and functions are given memory allocation ie. stored in heap memory and values assigned as undefined.The global execution context is pushed into the callstack and it remains there until all the code gets executed.After complete execution global execution context gets popped from callstack.<br/><br/>
+    
+        2.Execution Phase - <br/>
+        This is the final phase of global execution context.Here code is executed line by line and the original values are assigned to the variables and to the functions at this stage. When function gets executed a seperate execution context gets executed ie. function execution which is pushed into the stack ie. at the top of the global execution context.Here the code inside the function gets excuted. After the execution of the function the function execution context gets popped out of the callstack and the rest of the code gets excuted.
+    </p>
+    <br/>
+    <img src="./JS 5.png" alt="JS Execution Img_1"/><br/>
+
+    <h4>Q 3 : Take a string variable age<br/>
+        a) if age less than 30 , print "Adult" , else "Old", use if else and ternary operator?<br/>
+        b) if age less than 15 , print "Young" , age greater than 15 but less than 30 print "Adult" else "Old" by using if else ladder?</h4>
+    <pre>
+        a) Answer -
+        var age=10;
+        if(age<30) {
+            console.log('Adult');
+        }else{
+            console.log('Old');
+        }
+
+        Output - Adult
+
+        var age=48;
+        console.log(age<30 ? 'Adult' : 'Old');
+
+        Output - Old
+
+        b) Answer -
+        var age=56;
+        if(age<15){
+            console.log('Young');
+        }else if(age>15 && age<30){
+            console.log('Adult');
+        }else{
+            console.log('Old');
+        }
+
+        Output - Old
+    </pre>
+    <br/>
+    <h4>Q 4 : Use switch case and create Week calendar Monday - print 0 , Tuesday - print 1 and so on Sunday - print 6?</h4>
+    <pre>
+        var day = 6;
+        switch  (day) {
+            case 0: console.log("Monday - Day - 0");
+                    break;
+            case 1: console.log("Tuesday - Day - 1");
+                    break;
+            case 2: console.log("Wednesday - Day - 2");
+                    break;
+            case 3: console.log("Thursday - Day - 3");
+                    break;
+            case 4: console.log("Friday - Day - 4");
+                    break;
+            case 5: console.log("Saturday - Day - 5");
+                    break;
+            case 6: console.log("Sunday - Day - 6");
+                    break;
+            default : console.log("OFF - Holiday");
+                    break;
+        }
+
+        Output - Sunday - Day - 6
+    </pre>
+    <br/>
+
+    <h4>Q 5 : Explain Hoisting?</h4>
+    <strong>Hoisting -</strong> Hoisting is a default Javascript Mechanism where our variables and Functions declarations are moved to top of their Scope before code execution (), only declarations are hoisted not initializations.<br/></br>
+
+    <script src="index4.js"></script>
+</body>
+</html>

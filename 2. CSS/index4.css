@@ -1,0 +1,58 @@
+.parent{
+    background-color: aqua;
+    position: relative;   
+    height: 30vh;
+    width: 30vw;
+    left: 70px;
+    border: 2px solid green;
+    border-radius: 20px;
+    /* position:fixed; */
+    /* position:static; */
+    /* position:sticky */
+
+}
+.child{
+    background-color: red;
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    left: 180px;
+    margin-top: 50px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.box1{
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+}
+.box2{
+    position: fixed;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 25px;
+    bottom: 15px;
+    right: 25px;
+}
+.box3{
+    position:sticky;
+    color: chocolate;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 0px;
+}
+.box4{
+    color: darkblue;
+    background-color: bisque;
+    text-align:left;
+}
+.box5{
+    position: static;
+    color: chocolate;
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 25px;
+    top: 0px;
+}

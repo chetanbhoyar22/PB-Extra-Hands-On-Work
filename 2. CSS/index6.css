@@ -1,0 +1,133 @@
+.box1{
+    border: 2px solid black;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 10px red;
+    padding-top: 25px;
+    text-shadow: 2px 3px 2px blue;
+}
+
+.box2{
+    border: 2px solid black;
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    transition: width 2s;
+    transition: width 2s, height 4s;
+    /* transition-delay: 1s; */
+}
+.box2:hover{
+    width: 300px;
+    height: 300px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: blueviolet;
+    transition: width 2s;
+}
+.div1 {
+transition-timing-function: linear;
+text-align: center;
+}
+.div2 {
+transition-timing-function: ease;
+text-align: center;
+}
+.div3 {
+transition-timing-function: ease-in;
+text-align: center;
+}
+.div4 {
+transition-timing-function: ease-out;
+text-align: center;
+}
+.div5 {
+transition-timing-function: ease-in-out;
+text-align: center;
+}
+.box:hover {
+width: 200px;
+}
+
+.box3{
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  border: 1px solid black;
+  text-align: center;
+}
+.box3:hover{
+    /* transform: translate(50px, 100px); */
+    /* transform: rotate(80deg); */
+    /* transform: rotate(-20deg); */
+    /* transform: scale(2, 3); */
+    /* transform: scale(0.5, 0.5); */
+    /* transform: scaleX(2); */
+    /* transform: scaleX(0.5); */
+    /* transform: scaleY(3); */
+    /* transform: scaleY(0.5); */
+    transform: skewX(20deg);
+    /* transform: skewY(20deg); */
+    /* transform: skew(20deg, 10deg); */
+    /* transform: skew(20deg); */
+    /* transform: matrix(1, -0.3, 0, 1, 0, 0); */
+    /* transform: rotateX(150deg); */
+    /* transform: rotateY(150deg); */
+    /* transform: rotateZ(90deg); */
+}
+.box4{
+    color: white;
+    text-align: center;
+    margin-left: 43%;
+    background-color: black;
+    height: 200px;
+    width: 300px;
+    border: 2px solid aqua;
+    box-shadow: 4px 3px 4px gray;
+    text-shadow: 3px 3px 2px yellow;
+}
+
+.box5{
+    height: 200px;
+    width: 300px;
+    margin-left: 43%;
+    background-color: yellow;
+    text-align: center;
+    border: 3px solid red;
+    transition: transform 5s;
+}
+.box5:hover{
+    transform: rotate(360deg);
+}
+  
+.box6{
+    height: 200px;
+    width: 300px;
+    margin-left: 43%;
+    border: 3px solid black;
+    background-color: purple;
+    text-align: center;
+    color: yellow;
+    transition: transform 5s;
+}
+.box6:hover{
+    transform: translate(500px);
+}  
+  
+.box7{
+    height: 200px;
+    width: 200px;
+    margin-left: 43%;
+    text-align: center;
+    transition: width 2s, height 2s, ease 2s;
+    border: 3px solid darkviolet;
+    background-color: dimgray;
+    color: darkblue;
+    transition-delay: 2s;
+}  
+.box7:hover {
+    width: 400px;
+}

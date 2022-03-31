@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Eleventh Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2 style="text-align: center"> JS - Day - 11 Task</h2>
+        </strong>
+            <h5>Q 1 : Given array of students marks [23, 45, 67, 78, 91] add 10 in all the elements of an array by using map and forEach function?</h5> 
+            <pre>
+        Using Map -
+                            let arr1 = [23, 45, 67, 78, 91]
+
+                            let mks1 = arr1.map(num => num + 10);
+                            console.log(mks1); //[33, 55, 77, 88, 101]
+                            
+        Using forEach -
+                            arr1.forEach((value,index) => {
+                                arr1[index] = value + 10;
+                            })
+                            console.log(arr1); //[33, 55, 77, 88, 101]
+                
+            </pre>   
+            
+            <h5>Q 2 : Given array of student marks [23, 45, 67, 78, 91] find out how many students have got marks less than 65 and return the array?</h5>
+            <pre>
+                let arr2 = [23, 45, 67, 78, 91];
+
+                let mks2 = arr2.filter(num => num < 65);
+                console.log(mks2); //[23, 45]
+                console.log(mks2.length);  //2
+            </pre>
+            
+            <h5>Q 3 : Return the sum of all the marks of students present in given array [23, 45, 67, 78, 91]</h5>
+            <pre>
+                let arr3 = [23, 45, 67, 78, 91];
+                let mks3 = arr3.reduce((sum, num) => {
+                        sum = sum + num;
+                        return sum;
+                        }, 0);
+                console.log(mks3); //304
+            </pre>
+            
+            <h5>Q 4 : Replace "Peter" with "John" in whole string : Given String : "Peter is a good friend of Mike. Peter is working in a IT company in Australia".</h5>
+            <pre>
+                let str1 = "Peter is a good friend of Mike. Peter is working in a IT company in Australia.";
+                
+                console.log(str1.replaceAll("Peter", "John")); 
+                //John is a good friend of Mike. John is working in a IT company in Australia. 
+            </pre>
+
+            <h5>Q 5 : Reverse a given string "Hello this is me", result should be "me is this Hello".</h5>
+            <pre>
+                let str2 = "Hello this is me";
+
+                console.log(str2.split(" ").reverse().join(" "));
+                //me is this Hello
+            </pre>
+
+            <h5>Q 6 : Create object by all 4 possible ways and explain with example?</h5>
+            <pre>
+                1. Using curly braces - 
+
+                let user = {
+                    name: "Aman",
+                    age: 24,
+                }
+                
+                //we can access in these 2 ways - 
+                
+                console.log(user.name);    //Aman
+                console.log(user["name"]); //Aman
+
+                2. Object constructor - 
+
+                let myObj = new Object();
+                myObj.name = 'Aman';
+                myObj.age = 25;
+                myObj.city = "Mumbai";
+                
+                console.log(myObj);  //{name: 'Aman', age: 25, city: 'Mumbai'}
+                const keys = Object.keys(myObj);
+                console.log(keys);   //['name', 'age', 'city']
+                const values = Object.values(myObj);
+                console.log(values); //['Aman', 25, 'Mumbai']
+
+                3. Object function constructor -
+
+                function sum(a,b){
+                    this.a=a;
+                    this.b=b;
+                    return a+b;
+                }
+                var x1=new sum(5,7);
+                var x2=new sum(9,2);
+                console.log(x1); //sum {a: 5, b: 7}
+                console.log(x2); //sum {a: 9, b: 2}
+
+                4. Object.create() - 
+
+                let newObj = Object.create(myObj);
+                console.log(newObj); 
+                //[[Prototype]]: Object 
+                //age: 25 
+                //city: "Mumbai" 
+                //name: "Aman"    
+            </pre>
+            
+            <h5>Q 7 : Create an object contain name age salary as the properties, retrieve key and values in separate arrays?</h5>
+            <pre>
+                var obj = {
+                    name: "Chetan",
+                    age: 22,
+                    salary: 150000
+                }
+    
+                console.log(Object.keys(obj));   // ['name', 'age', 'salary']
+                console.log(Object.values(obj)); // ['Chetan', 22, 150000]
+            </pre>
+            
+            <h5>Q 8 : Explain call bind and apply in JS?</h5>
+            <pre>
+                Call apply bind is basically used to borrow function methods.
+
+                1. Call - It borrows the function method and passes the object as an argument.
+
+                var obj={
+                    name: "Ajay",
+                    age:24
+                }
+                function add(city){
+                    console.log("Name is "+this.name+" age is "+this.age+" & city is "+city);
+                }
+                add.call(obj,"Mumbai");
+                
+                //Name is Ajay age is 24 & city is Mumbai
+
+               2. Apply - It borrows the function method and passes the object as an argument. The only difference is it passes additional argument inside the array.
+
+                var obj={
+                    name: "Arun",
+                    age:34
+                }
+                function add(city){
+                    console.log("Name is "+this.name+" age is "+this.age+" & city is "+city);
+                }
+
+                add.apply(obj,["Delhi"]);
+
+                //Name is Arun age is 34 & city is Delhi
+        
+                3. Bind - It borrows the function method and passes the object as an argument and returns a new function ie. copy of that function.
+        
+                var obj={
+                    name: "Arav",
+                    age:25
+                }
+                function add(city){
+                    console.log("Name is "+this.name+" age is "+this.age+" & city is "+city);
+                }
+        
+                var response = add.bind(obj,"Jaipur");
+                response();
+
+                //Name is Arav age is 25 & city is Jaipur
+            </pre>
+            
+            <h5>Q 9 : Explain Prototype Chaining?</h5>
+            <pre>
+                Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype has a prototype of its own and so 
+                on until it reaches to null as its prototype. Hence this chain is called prototype chaining.
+
+                // pocket -> bed -> table -> head
+
+                let head = {
+                    glasses: 1
+                }
+
+                let table = {
+                    pen: 3,
+                    __proto__: head
+                }
+
+                let bed = {
+                    sheet: 1,
+                    pillow: 2,
+                    __proto__: table
+                }
+
+                let pockets = {
+                    money: 2000,
+                    __proto__: bed
+                }          
+            </pre>
+        <script src="index11.js"></script>
+</body>
+</html>

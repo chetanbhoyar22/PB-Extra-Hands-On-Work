@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Sixth Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2>Function -</h2>
+            <p>Function is a piece of code which we will be used for reusability, it means write once & call multiple times or call anywhere.</p> 
+
+            <h2>Function Types -</h2>
+            <p> I. Function without parameters, without return.
+                <pre>
+                    function add(){
+                        console.log('Hi')
+                    }
+                    add();  //Hi
+                </pre>
+                II. Function with params, without return.
+                <pre>
+                    function name(userName){
+                        console.log(userName);
+                    }
+                    name('Chetan'); //Chetan
+                </pre>
+                III. Function with params, with return.
+                <pre>
+                    function multiply(a,b){
+                        return a*b;
+                    }
+                    console.log(multiply(2,9)); //18
+                </pre>
+            </p>
+
+            <ul type="none">
+                <li>1. Function Declaration</li>
+                <p>
+                    Function declaration defines a function with specified parameters. Here we have to give function name. Function declarations are hoisted.
+                </p>
+                <pre>
+                    function wish (){
+                         return('Hi!');
+                    }
+                    var result = wish();
+                    console.log(result);  //Hi!
+                </pre>
+
+                <li>2. Function Expression</li>
+                <p>
+                    Function Expression is similar to function declaration but here the function name is ommited. Function expression are not hoisted since during hoisting it treats it as a function variable.
+                </p>
+                <pre>
+                    function add(a,b){
+                        return a+b;
+                    }
+                    console.log(add(2,9)); //11
+                </pre>
+                
+                <li>3. Function Declaration VS Function Expression</li>
+                <p>
+                    Function Declarations its automatically hoisted but fun expressions not hoisted and treat as a variable so it shows undefined.
+                </p>
+                
+                <li>4. Function Constructor</li>
+                <p>Function constructor is used to create objects. It use constructor function by using new keyword</p>
+                <pre>
+                    var sub = new Function ("num1", "num2", "{return num1 - num2}");
+                    console.log(sub (21,11)); //10
+                </pre>
+                
+                <li>5. Immediately Invoked Function Expression (IIFE)</li>
+                <p>
+                    IIFE is immediately invoked function expression which gets executed as soon as it is created. It is basically a anonymous function which can be executed only once.
+                </p>
+                <pre>
+                    (function(){
+                        console.log('IIFE');
+                    })() //IIFE 
+                </pre>
+                
+                <li>6. First Class Functions</li>
+                <P>
+                    First class function is function which can be passed as an argument inside a another function or it can be returned by a function or it can assigned as a value to another function.
+                </P>
+                <pre>
+                    function sub(a,b){
+                        return a-b;
+                    }
+                    
+                    function subCall(sub){
+                       return sub(15,5);
+                    }
+                    
+                    console.log(subCall(sub)); //10
+                </pre>
+
+                <li>7. Callback Functions</li>
+                <p>
+                    Callback function is a function which can be passed as an argument to another function.
+                </p>
+                <pre>
+                    function hello (param){
+                        param();
+                        console.log('hello');
+                    }
+                    function hi(){
+                        console.log('hi');
+                    }
+                    hello(hi);   //hi //hello
+                </pre>
+                
+                <li>8. Higher Order Functions</li>
+                <p>
+                    Higher order function is a function which can accept a function as a parameter or return a function.
+                </p>
+                <pre>
+                    function submitHomeWork (teacher){
+                        teacher();
+                        console.log('submit home work');
+                    }
+                    function copyHomeWork(){
+                        console.log('copy home work');
+                    }
+                    submitHomeWork(copyHomeWork); //copy home work //submit home work
+                </pre>
+                
+                <li>9. Closures</li>
+                <p>
+                    It is a combination of both inner and lexical environment created by the inner function. We are able to access the variable from outer scope.
+                </p>
+                <pre>
+                    function outer(){
+                        let a=20;
+                        function inner(){
+                            console.log(a);
+                        }
+                        inner();
+                    }
+                    outer();      //20                    
+                </pre>
+                <li>10. How Functions Get Executed?</li>
+                <p>The code inside a function is not executed when the function is defined. The code inside a function is executed when the function is invoked. It is common to use the term "call a function" instead of "invoke a function". It is also common to say "call upon a function", "start a function", or "execute a function".</p>
+            </ul>
+            <h4 style="text-align: center">Note - Example are executed in js file.</h4><br/>
+            <h2 style="text-align: center">JS Day 6 Tasks</h2><br/>
+            <p>Q 1 : Explain all different types of function in JS first class, higher order, callback and give example?</p>
+
+            <p>First Class Functions -</p>
+            <P>
+                First class function is function which can be passed as an argument inside a another function or it can be returned by a function or it can assigned as a value to another function.
+            </P>
+            <pre>
+                function sub(a,b){
+                    return a-b;
+                }
+                
+                function subCall(sub){
+                   return sub(15,5);
+                }
+                
+                console.log(subCall(sub)); //10
+            </pre>
+
+            <p>Higher Order Functions -</p>
+            <p>
+                Higher order function is a function which can accept a function as a parameter or return a function.
+            </p>
+            <pre>
+                function submitHomeWork (teacher){
+                    teacher();
+                    console.log('submit home work');
+                }
+                function copyHomeWork(){
+                    console.log('copy home work');
+                }
+                submitHomeWork(copyHomeWork); //copy home work //submit home work
+            </pre>
+
+            <p>Callback Functions -</p>
+            <p>
+                Callback function is a function which can be passed as an argument to another function.
+            </p>
+            <pre>
+                function hello (param){
+                    param();
+                    console.log('hello');
+                }
+                function hi(){
+                    console.log('hi');
+                }
+                hello(hi);   //hi //hello
+            </pre>
+            <p>Q 2 : Explain Closure?</p>
+
+            <p>Closures -</p>
+            <p>
+                It is a combination of both inner and lexical environment created by the inner function. We are able to access the variable from outer scope.
+            </p>
+            <pre>
+                function outer(){
+                    let a=20;
+                    function inner(){
+                        console.log(a);
+                    }
+                    inner();
+                }
+                outer();      //20                    
+            </pre>
+        </strong>
+        <script src="index6.js"></script>
+</body>
+</html>

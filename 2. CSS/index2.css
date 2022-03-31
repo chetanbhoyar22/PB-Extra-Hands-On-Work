@@ -1,0 +1,48 @@
+.container {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  /* justify-content:space-around; */
+  align-items: flex-end;
+}
+.box {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  /* display:inline; */
+  /* display : inline-block;   */
+  /* display:none; */
+}
+.extra {
+  background-color: bisque;
+} /* External CSS */
+.model1 {
+  background-color: yellow;
+  width: 300px;
+  border: 15px solid gray;
+  margin: 20px;
+}
+.model2 {
+  background-color: yellow;
+  width: 300px;
+  border: 15px solid gray;
+  padding: 25px;
+}
+.container1 {
+  background-color: cornsilk;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pro {
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+  text-align: center;
+  padding-top: 50px;
+  background-color: aqua;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EC - Fifth Day (CSS)</title>
+    <link rel="stylesheet" href="./index5.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">
+      CSS - Linear Gradient, Radial Gradient, float, clear,
+    sizing - #border#content& z-index    
+    </h2>
+    <div class="box1"><b>linear-gradient -</b>Perhaps the most common type of gradient we see in web design is the linear-gradient(). It’s called “linear” because the colors flow from left-to-right, top-to-bottom, or at any angle you chose in a single direction. </div><br/>
+    <div class="box2"><b>radial-gradient - </b>A radial gradient differs from a linear gradient in that it starts at a single point and emanates outward. Gradients are often used to simulate a light source, which we know isn’t always straight. That makes the transitions between colors in a radial gradient seem even more natural.</div><br/>
+
+    <div class="box3"><b>float -</b> The float property is used for positioning and formatting content</div><br/>
+    <!-- left - The element floats to the left of its container
+         right - The element floats to the right of its container
+         none - The element does not float (will be displayed just where it occurs in the text). DEFAULT
+         inherit - The element inherits the float value of its parent -->
+
+    <div class="box4"><b>clear -</b> The clear property specifies what should happen with the element that is next to a floating element.</div>
+    <!-- none - The element is not pushed below left or right floated elements. This is default
+         left - The element is pushed below left floated elements
+         right - The element is pushed below right floated elements
+         both - The element is pushed below both left and right floated elements
+         inherit - The element inherits the clear value from its parent -->
+
+    
+    <!-- Box-Sizing - How your width and height should be calculated. -->
+    <div class="box5"><b>Border-Box -</b> The padding and border are included in the width and height. </div><br />
+    <!-- Width= 200px-(2*10)-(2*2)=200-20-4=176
+         Height= 200px-(2*10)-(2*2)=200-20-4=176 -->
+    <!-- If you don't want to add padding and border to your box - Border Box -->
+
+    <div class="box6"><b>Content-Box -</b> The width & height of the element only include the content. In other words, the border, padding and margin aren’t part of the width or height. This is the default value</div>
+    <!-- Width= 200px+(2*10)+(2*2)=200+20+4=224
+         Height= 200px+(2*10)+(2*2)=200+20+4=224 -->
+    <!-- If you want to include your padding and border - Content Box -->
+
+    <!-- Z-Index - It will helps to arrange items whether you want to keep it in stack manner. -->
+    <div class="box box7">The <b>z-index property</b> specifies the stack order of an element.
+      An element with greater stack order is always in front of an element with a lower stack order
+    </div>
+    <div class="box box8"></div>
+    <br /><br /><br /><br />
+
+    <h2 style="text-align: center">Day 5 Tasks</h2>
+  
+    <!-- Q 1 : Arrange 5 boxes in alternate manner , first box on left of screen , second on right of screen and so on -->
+    <div class="box9"><b>BOX 1</b></div>
+    <div class="box10"><b>BOX 2</b></div>
+    <div class="box11"><b>BOX 3</b></div>
+    <div class="box12"><b>BOX 4</b></div>
+    <div class="box13"><b>BOX 5</b></div>
+
+    <!-- Q 2 :Create two boxes and box1 should be on top and box2 should be on bottom -->
+    <div class="index1">Box 1 (Z-index +1)</div>
+    <div class="index2">Box 2 (Z-index -1)</div>
+
+    <!-- Q 3 :Explain box sizing Properties with examples " -->
+  <div style="margin-top: 1800px;">
+    <div class="content">
+      Content-box -- It includes only the content. But border and padding are not included.
+    </div>
+    <br>
+    <div class="border">
+      Border-box -- It includes content, padding & border.
+    </div>
+  </div>
+  </body>
+</html>

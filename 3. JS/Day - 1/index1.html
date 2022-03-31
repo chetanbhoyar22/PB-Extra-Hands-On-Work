@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - First Day (JS)</title>
+</head>
+<body>
+    <h2 style="text-align: center">JS Day 1 Tasks</h2><br/>
+
+    <h4>1. What is JS?</h4>
+    <ul type="square">
+        <li>JS is a dynamic programming language and it is most popular language in the world wide.</li>
+        <li>JS is used before for only interactive web pages.</li>
+        <li>JS is used everywhere now web apps and mobile apps ,HTML , CSS are static.</li>
+        <li>JS is used in NETFLIX, WALMART, PAYPAL, Etc.</li>
+    </ul><br/>
+
+    <h4>2. What is JS Run Time Environment?</h4>
+    <img src="./JS 1.png" alt="JS Run-Time Env. Img_1"/>
+    <br/>
+    <img src="./JS 2.png" alt="JS Run-Time Env. Img_2"/>
+    <br/>
+    <p>Javascript run-time environment is the place where our program gets executed. It determines what global objects your program can access and it can also impact how it runs. JS run-time environment consists of API's,Javascript Engine,Callback Queue and Microtask Queue.</p>
+    <br/>
+
+    <h4>3. What is JS Engine?</h4>
+    <img src="./JS 3.png" alt ="JS Engine Img_1" height="650px" width="950px"/>
+    <br/>
+    <ul type="square">
+        <li>Compilation to execution in javascript we called as interpreter.</li>
+        <li>Parsere -code executed line by line.</li>
+        <li>Interpreter - Executed line by line.</li>
+        <li>Interpreter is fast compared to compiler,changes from source code to byte code and then result.</li>
+    </ul>
+    <p>Javascript Engine is software component that executes javascript code.Different browsers have different javascript Engines. For ex. Google Chrome has V8 Engine,Internet explorer have Chakra and Mozilla have Spider Monkey.The architecture of Internet Explorer engine is shown below.</p>
+    <br/>
+    <img src="./JS 4.png" alt="JS Engine Img_2"/>
+    <br/>
+
+    <h4>4. What is Execution in JS?</h4>
+    <p>Javascript execution context is divided into two parts -<br/><br/>
+    1. Creation Phase<br/>
+    2. Execution Phase<br/><br/>
+
+    1.Creation Phase - <br/>
+    This is the initial phase of Global execution content.Here all variables and functions are given memory allocation ie. stored in heap memory and values assigned as undefined.The global execution context is pushed into the callstack and it remains there until all the code gets executed.After complete execution global execution context gets popped from callstack.<br/><br/>
+
+    2.Execution Phase - <br/>
+    This is the final phase of global execution context.Here code is executed line by line and the original values are assigned to the variables and to the functions at this stage. When function gets executed a seperate execution context gets executed ie. function execution which is pushed into the stack ie. at the top of the global execution context.Here the code inside the function gets excuted. After the execution of the function the function execution context gets popped out of the callstack and the rest of the code gets excuted.</p><br/>
+    <img src="./JS 5.png" alt="JS Execution Img_1"/>
+    <script src="index1.js"></script>   
+</body>
+</html>

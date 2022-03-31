@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Seventh Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2 style="text-align: center">Arrays Methods - index, map, filter, reduce, push, pop, shift, unshift, some & every, slice</h2>
+            <h2>Array -</h2>
+            <p>
+                We can store any type of data type.
+            </p>
+
+            <h2>Index -</h2>
+            <p>
+                The first index of an array is stated with 0.
+            </p>
+            <pre>
+                syntax - const value = arr.indexOf(2);
+            </pre>
+
+            <h2>Map -</h2>
+            <p>
+                Map is an method in js, which is used to transform an array i.e., which will iterate through each and every element.
+            </p>
+            <pre>
+                syntax - const result1 =arr.map(x => x*4);
+            </pre>
+
+            <h2>Filter - </h2>
+            <p>
+                Filter which checks the condition and filter all the elements in array and return you a new array.
+            </p>
+            <pre>
+                syntax - const result2 = arr.filter(x => x>2);
+            </pre>
+
+            <h2>Reduce - </h2>
+             <p>
+                 whenever the sum of all elements in an array or whenever we want to find the max value in array.
+            </p>
+            <pre>
+                syntax - const total = arr.reduce((accumulator, current) => accumulator = accumulator + current, 0);
+            </pre>
+
+            <h2>Push - </h2> 
+            <p>
+                It will add one more value at the end of the array.
+            </p>
+            <pre>
+                syntax - arr.push(8);
+            </pre>
+
+            <h2>Pop - </h2>
+            <p>
+                It removes an element from the end of the array.
+            </p>
+            <pre>
+                syntax - arr.pop();
+            </pre>
+            <h2> Shift -</h2>
+            <p>
+                It will remove first element an array.
+            </p>
+            <pre>
+                syntax: arr.shift(); 
+            </pre>
+
+            <h2>Unshift - </h2> 
+            <p>
+                It will add one value at the first of an array.
+            </p>
+            <pre>
+                syntax - arr.unshift(1);
+            </pre>
+
+            <h2>Some & Every - </h2>
+            <p>
+                Both these are take in a condition and check if all the elements in th array is satisfying the condition or not, they always return a boolean value.
+            </p>
+            <pre>
+                some syntax - const val2 = arr.some(x => x%2 == 0); 
+        
+                every syntax - const val3 = arr.every(x => x%2 == 0);
+            </pre>
+            
+            <h2>Slice -</h2>
+            <p>
+                It will not manipulate the array, it will try to remove elements from an array.
+            </p>
+            <pre>
+                syntax - const val4 = arr.slice(1,3); 
+        
+                1. Start Index : Element in this index will be included in the new array. 
+        
+                2. End Index: Element in this before index will be included.
+            </pre>
+            <h4>Note - Example are executed in js file.</h4><br/>
+        </strong>
+        <script src="index7.js"></script>
+</body>
+</html>

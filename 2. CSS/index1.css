@@ -1,0 +1,66 @@
+/* External */
+body {
+  width: 1400px;
+  height: 1090px;
+  border: 10px double hotpink;
+  margin: 30px;
+  padding: 20px;
+}
+.extra {
+  background-color: blueviolet;
+}
+#visual {
+  background-color: burlywood;
+}
+.model {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+.extra_circle {
+  border: 2px solid red;
+  padding: 10px;
+  border-radius: 25px;
+}
+.hi {
+  padding-left: 95px;
+}
+.box {
+  background-color: gray;
+  width: 200px;
+  border: 10px solid yellow;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+}
+.box1 {
+  width: 170px;
+  height: 90px;
+  border: 10px groove red;
+  text-align: center;
+  margin-left: 50px;
+}
+.circle {
+  height: 100px;
+  width: 100px;
+  margin-left: 75px;
+  background-color: blue;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+.b1 {
+  text-align: center;
+  color: aqua;
+}
+.b2 {
+  background-color: black;
+}
+#a1 {
+  font-size: larger;
+  color: blueviolet;
+}
+#a2 {
+  background-color: black;
+}

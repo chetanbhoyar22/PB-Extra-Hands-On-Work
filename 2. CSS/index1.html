@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EC - First Day (CSS)</title>
+    <style>
+      p {
+        background-color: aqua;
+      }
+      h5 {
+        color: blue;
+      }
+      /* Internal */
+    </style>
+    <link rel="stylesheet" href="./index1.css" />
+  </head>
+  <body>
+    <p style="background-color: yellow">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, culpa -
+      Inline CSS
+    </p>
+
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, culpa -
+      Internal CSS
+    </p>
+
+    <p class="extra">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, culpa -
+      External CSS with class attribute
+    </p>
+    <p></p>
+
+    <p id="visual">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, culpa -
+      Id attribute
+    </p>
+
+    <!-- Box Model -->
+    <div class="model">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum corporis
+      ipsam nemo. Veritatis sapiente totam obcaecati illo sunt omnis ipsam - Box
+      Model, Margin, Padding, Border
+    </div>
+
+    <!-- Border Radius -->
+    <div class="extra_circle">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, nam? - Border Radius
+    </div>
+
+    <!-- Inline has high priority than internal than external -->
+
+    <h2 style="text-align: center;">Day 1 Tasks</h2>
+    <!-- create one element and it should have three stylings i.e inline,internal,external -->
+    <h5 style="font-style: italic" class="hi">Hello Everyone!</h5>
+    <!-- style is inline -->
+
+    <!-- Create one box and explain box model -->
+    <div class="box">Box Model</div>
+    <br /><br />
+
+    <!-- Create border property for body it should have 10px double & groove hotpink -->
+    <div class="box1">Groove Hotpink</div>
+    <br />
+
+    <!-- Create Circle  -->
+    <div class="circle"></div>
+
+    <!-- class and id difference -->
+    <p class="b1 b2">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, iste.
+    </p>
+    <br />
+    <p id="a1">Lorem ipsum dolor sit amet.</p>
+  </body>
+</html>

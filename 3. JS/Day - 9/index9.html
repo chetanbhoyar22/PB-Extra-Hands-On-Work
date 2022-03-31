@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Ninth Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2 style="text-align: center">
+                Objects - 
+                    creation using object constructor, using curly braces, function constructor
+                    Object.keys(), Object.values(), 
+                    Object.create(), spread operator.
+            </h2>
+            <pre>
+                <p>Objects - It is a non-primitive data types. Objects are key value pairs.</p>
+                    
+                    //using curly braces -
+
+                    const person={
+                        name:"Chetan Bhoyar",
+                        age:25,
+                        contact:1234567890,
+                        bloodGroup:"B+ Positive"
+                    }
+
+                    //we can access in these 2 ways -
+
+                    console.log(person.name);   //By using Dot Notation   //Chetan Bhoyar
+                    console.log(person["age"]); //By using square bracket and make sure you are using strings "", when your accessing your property. //25
+                    
+                    //this keyword -
+                    
+                       const student={
+                            id:101,
+                            name:"raju",
+                            age:25,
+                            contact:012345,
+                            displayInfo:function(){  //Method
+                                console.log(" my id is "+this.id+" my age is "+this.age)
+                            }
+                        }
+                    student.displayInfo();
+                        
+                <p>Object.create - which will allows us to create an object by taking the reference of an existing.</p>
+                    
+                    const flags=Object.create(student)
+                    console.log(flags);
+                    
+                    //keys -
+
+                    const myObjkeys=Object.keys(student);
+                    console.log(myObjkeys);
+                    
+                    //values -
+
+                    const myObjvalues=Object.values(student);
+                    console.log(myObjvalues);  
+
+
+this keyword refers to the global objects.
+
+Function inside the object is called method.
+
+We can create object using a object Constructor also.
+                    
+
+                    //Object constructor -
+
+                    const myObj=new Object()
+                    myObj.name="vijay"; //Dot Notation
+                    console.log(myObj);
+                    myObj["name"]="vijaykumar"; //Using Square Bracket.
+                    console.log(myObj);
+                    
+                    <p>Spread operator - It is use to shallow copy objects.</p>
+                    
+                    const body={
+                        height:5.11,
+                        weight:74
+                    }
+                    const brain={
+                        iq:1
+                    }
+                    const person1={
+                        ...body,
+                        ...brain
+                    }
+                    
+                    console.log(person1);
+                    console.log(person1.height);
+                    
+                    let arr=[1,2,3,4,5,6];
+                    console.log(arr);
+                    console.log(...arr); //destructuring the array.
+                    
+                    //Function constructor -
+
+                    function Employee(name, age){
+                        this.name = name;
+                        this.age = age;
+                    }
+                    const Employee1 = new Employee ("Chetan");
+                    const Employee2 = new Employee ("Aman");
+                    
+                    console.log(Employee1); 
+                    
+                    Employee1.age = 27;
+                    console.log(Employee1);
+            </pre>
+            <h4>Note - Example are executed in js file.</h4><br/>
+        </strong>
+        <script src="index9.js"></script>
+</body>
+</html>
