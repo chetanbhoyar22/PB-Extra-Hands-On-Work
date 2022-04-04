@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Twelveth Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2 style="text-align: center">
+                DOM understanding and manipulation,
+                Accessing HTML element by tag, id, classname,
+                Change innerText and innerHTML,
+                Change styling &
+                Create new HTML element
+            </h2>
+        </strong>
+            <h1>Hello Everyone!</h1>
+            <p class="heading">I'm in Pune</p>
+            <span id="unique">Today is monday.</span>
+            <pre style="text-align: center;">
+                innerText - It will returns all the text contained by an element and all its child elements.
+                innerHTML - It will returns all the text including html tags and that is contained by an element.
+            </pre>
+
+            <pre style="text-align: center;">
+                       <b>Accessing HTML element by tag, id, classname - </b>
+                1. ByTagName -
+                <!-- <h1>Hello Everyone!</h1> -->
+                let element1=document.getElementsByTagName("h1");
+                console.log(element1);
+                console.log(element1[0].innerText);
+
+                2. ByClassName -
+                <!-- <p class="heading">I'm in Pune</p> -->
+                const element2= document.getElementsByClassName("heading");
+                console.log(element2[0].innerHTML); 
+
+                3. ById - 
+                <!-- <span id="unique">Today is monday.</span> -->
+                const element3= document.getElementById("unique");
+                console.log(element3.innerHTML); 
+            </pre>
+
+            <h3></h3>
+            <button onClick="clickMe()">Click Me</button>
+
+            <pre style="text-align: center;">
+                    <b>Change styling</b>
+                <!-- <h3></h3>
+                <button onClick="clickMe()">Click Me</button> -->
+                function clickMe(){
+                    const text1=document.getElementsByTagName("h3");
+                    text1[0].style.color="red";
+                    text1[0].style.backgroundColor="yellow";
+                    text1[0].innerText="Welcome to India";
+                }
+            </pre>
+
+            <h4 id="text">Elevation</h4>
+            <button onClick="show()">Change</button>
+
+            <pre style="text-align: center;">
+                       <b>By clicking change name</b>
+                <!-- <h4 id="text">Elevation</h4>
+                <button onClick="show()">Change</button>  -->
+                function show(){
+                    const text2=document.getElementById("text");
+                    text2.innerText="Elevation Academy"
+                }
+            </pre>
+
+            <h5>Way to Mumbai</h5>
+            <button onClick="visible()">Visible</button>
+            <button onClick="invisible()">Invisible</button>
+
+            <pre style="text-align: center;">
+                        <b>By clicking visible & invisible</b>
+                <!-- <h5>Way to Mumbai</h5>
+                <button onClick="visible()">Visible</button>
+                <button onClick="invisible()">Invisible</button>  -->
+                function visible(){
+                    const text3=document.getElementsByTagName("h5");
+                    text3[0].innerText="Way to Mumbai";
+                }
+                
+                function invisible(){
+                    const text4=document.getElementsByTagName("h5");
+                    text4[0].innerText=" ";
+                }
+            </pre>
+
+
+            <div id="hey">
+                <h5>Hello Everyone!</h5>
+                <span>I'm Chetan</span>
+            </div>
+            <br/>
+            <button onClick="text()">innerText</button>
+            <button onClick="html()">innerHTML</button>
+
+            <pre style="text-align: center;">
+                       <b>Change innerText and innerHTML -</b>
+                <!-- <div id="hey">
+                    <h5>Hello Everyone!</h5>
+                    <span>I'm Chetan</span>
+                </div>
+                <br/>
+                <button onClick="text()">innerText</button>
+                <button onClick="html()">innerHTML</button> -->
+                function text(){
+                    const element4 = document.getElementById('hey');
+                    alert(element4.innerText);
+                }
+                
+                function html(){
+                    const element5 = document.getElementById('hey');
+                    alert(element5.innerHTML);
+                }
+            </pre>
+
+
+            <h5 id="parent"></h5>
+            <button onclick="create()">Create Span Tag</button>
+
+            <pre style="text-align: center;">
+                        <b>By clicking create a span tag with id attribute</b>
+                <!-- <h5 id="parent"></h5>
+                     <button onclick="create()">Create Span Tag</button> -->
+                function create(){
+                const element6 = document.createElement('span');
+                element6.setAttribute("id","get")
+                element6.innerText = "Span Tag Created" + " ";
+                console.log(element6);
+                const parent = document.getElementById('parent');
+                parent.appendChild(element6);
+            }
+                        
+                    
+                        <b>Note - Example are executed in js file.</b>
+            </pre>
+        <script src="index12.js"></script>
+</body>
+</html>
