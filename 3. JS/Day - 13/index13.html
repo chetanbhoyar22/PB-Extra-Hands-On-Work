@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EC - Thirteenth Day (JS)</title>
+</head>
+<body>
+<strong>
+<h2 style="text-align: center">
+    setTimeout function, 
+    Event loop, closure and
+    callback queue    
+</h2>
+</strong>  
+<h3>setTimeout function -</h3>
+<p>
+setTimeout Function - IT is a type of function whenever we want to run it at certain time intervals i.e whenever we want to delay our function after certain time then we will use setTimeoutFunction.
+</p>
+
+<pre>  
+    Example - 
+
+    setTimeout(() =>{
+        console.log("Hi, I am a setTimeout function");
+    }, 5000)      
+    //Hi, I am a setTimeout function - (It will be executed after 5 sec)
+</pre>
+
+<br/>
+
+<h3>Event loop -</h3>
+<p>
+The event loop is a constantly running process that monitors both the callback queue and the call stack. If the call stack is not empty, the event loop waits until it is empty and places the next function from the callback queue to the call stack.
+</p>
+
+<img style="border: 4px solid red;" src="https://res.cloudinary.com/practicaldev/image/fetch/s--BLtCLQcd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://devtolydiahallie.s3-us-west-1.amazonaws.com/gif14.1.gif" alt="Event_Loop" />
+
+<br/>
+
+<h3>Closures -</h3>
+<p>
+Function bounded with its lexical environment its known as closures. Whenever function is returned even its vanished in execution context but still its remember the reference its showing to. Its not just that function alone it returns but the entire closures.
+
+closures will not remember value it will always remember address location.
+
+<pre>
+    Example - 
+
+    function OuterFunction() {
+        var outerVariable = 100;
+    function InnerFunction() {
+        console.log(outerVariable);
+    }
+        return InnerFunction;
+    }
+    var innerFunc = OuterFunction();
+    innerFunc();
+
+    //100
+</pre>
+
+In the above example, return InnerFunction; returns InnerFunction from OuterFunction when you call OuterFunction(). A variable innerFunc reference the InnerFunction() only, not the OuterFunction(). So now, when you call innerFunc(), it can still access outerVariable which is declared in OuterFunction(). This is called Closure.
+</p>
+
+<br/>
+
+<h3>Callback Queue -</h3>
+
+<p>
+Callback queue is a data structure which gets ordinary callback functions coming from asynchronous functions such as setTimeout after the times expires.Callback function has a lesser priority than the microtask queue.
+</p>
+
+<img style="border: 4px solid black;" src="./Img/Callback Queue.PNG" alt="CBQ" /><br/><br/>
+
+<b>Note - Example are executed in js file.</b>
+<script src="index13.js"></script>
+</body>
+</html>

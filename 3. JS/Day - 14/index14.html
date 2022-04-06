@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EC - Fourteenth Day (JS)</title>
+</head>
+<body>
+        <strong>
+            <h2 style="text-align: center">
+                callback function, callback hell,
+                Promises, Promise chaining &
+                Async Await keywords
+            </h2>
+        </strong>  
+        <pre>
+            <h3>Callback Function -</h3>
+            callback function is a function which accepts another functions.
+            argument & which will be execute later.
+
+            Example - 
+
+            function doHomeWork(callback){
+                callback()
+                console.log("do homework");
+            }
+            function copyHomeWork(){
+                console.log("copy homework");
+            }
+            doHomeWork(copyHomeWork)
+
+            //copy homework
+            //do homework
+
+            <h3>Callback Hell -</h3>
+            Its an triangle like structure where we can handle asynchronous operations and 
+            having multiple callback leads to hard to debug to developers and it will be problem to our js engine compiler also.
+
+            Example - 
+
+            function call() {
+                setTimeout(() => {
+                    console.log(1)
+                    setTimeout(() => {
+                        console.log(2)
+                        setTimeout(() => {
+                            console.log(3)
+                            setTimeout(() => {
+                                console.log(4)
+                                setTimeout(() => {
+                                    console.log(5)
+                                }, 4000);
+                            }, 3000);
+                        }, 2000);
+                    }, 1000);
+                }, 5000);
+            }
+            call()
+
+            //1
+            //2
+            //3
+            //4
+            //5
+
+            <h3>Promises -</h3>
+            These are used to handle asynchronous operations in js. They are easy to manage 
+            when dealing with multiple async operations where in callback hell can be created 
+            where it will leads to unmanageable code. 
+            Promises is an constructor function which will accept two parameters one is resolve and another is reject.
+            Resolve will always be stored in then block Reject is always going to store in catch block.
+
+            Example - 
+
+            function printAlpha(num) {
+                return new Promise((resolve, reject) => {
+                        if(num % 2 == 0){
+                            console.log("Condition Satisfied");
+                        }else{
+                            console.log("Condition Unsatisfied");
+                        }
+                })
+            }
+            printAlpha(24).then((response) => {
+                console.log(response);
+            }).catch((error) =>{
+                console.log(reject);
+            })
+
+            //Condition Satisfied
+
+            <h3>Promise Chaining -</h3>
+            Process of executing a sequence of asynchronous tasks one after another using promises is known as promise chaining.
+
+            Example - 
+
+            function printAlpha(time, value) {
+                return new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            console.log(value);
+                            resolve()  
+                        }, time);  
+                })
+            }
+            printAlpha(5000, 1)
+            .then(()=>printAlpha(4000,2))
+            .then(()=>printAlpha(3000,4))
+            .then(()=>printAlpha(1000,6))
+            .then(()=>printAlpha(6000,8))
+
+            //1
+            //2
+            //4
+            //6
+            //8
+
+            <h3>Async Await -</h3>
+            Async/Await is the extension of promises which we get as a support in the language. You can refer Promises in Javascript to know more about it. 
+            Async: It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread.
+            Async and await is used to ignore promise chaining.
+
+            Example - 
+
+            function printAlpha(time, value) {
+                return new Promise((resolve, reject) => {
+                        setTimeout(() => {
+                            console.log(value);
+                            resolve() 
+                        }, time);  
+                })
+            }
+            async function print(){
+                await printAlpha(4000, 1)
+                await printAlpha(6000, 2)
+                await printAlpha(3000, 3)
+                await printAlpha(4000, 4)
+            }
+            print()
+
+            //1
+            //2
+            //3
+            //4
+        </pre>
+        <b>Note - Example are executed in js file.</b>
+
+        <h2 style="text-align: center">JS Day 14 Tasks</h2><br/>
+            
+            <h4>Q 1 : Explain event loop?</h4>
+            <p>
+                The event loop is a constantly running process that monitors both the callback queue 
+                and the call stack. If the call stack is not empty, the event loop waits until it is 
+                empty and places the next function from the callback queue to the call stack.
+            </p>
+            <img style="border: 5px solid red;" src="https://miro.medium.com/max/1760/1*Eg9EkLzLfO0nZTpqNq9WCQ.gif" alt="Event_Loop" />
+            
+            <h4>Q 2 : Explain callback hell?</h4>
+            <p>
+                Its an triangle like structure where we can handle asynchronous operations and 
+                having multiple callback leads to hard to debug to developers and it will be problem to our js engine compiler also.
+                
+                <pre>
+                    Example - 
+        
+                    function printVowels(){
+                        setTimeout(()=>{
+                            console.log("A");
+                                setTimeout(()=>{
+                                    console.log("E");
+                                        setTimeout(()=>{
+                                            console.log("I");
+                                                setTimeout(()=>{
+                                                   console.log("O");
+                                                        setTimeout(()=>{
+                                                            console.log("U");
+                                                   }, 4000) 
+                                                }, 3000)
+                                        }, 2000)
+                                }, 1000)
+                        }, 5000)
+                    }
+                    printVowels()
+    
+                    //A
+                    //E
+                    //I
+                    //O
+                    //U
+                </pre>
+            </p>
+
+            <h4>Q 3 : How to write a promise function in JS and explain Promise chaining?</h4> 
+            <h5>Promise function in JS -</h5>
+            <p>
+                These are used to handle asynchronous operations in js. They are easy to manage 
+                when dealing with multiple async operations where in callback hell can be created 
+                where it will leads to unmanageable code. 
+                Promises is an constructor function which will accept two parameters one is resolve and another is reject.
+                Resolve will always be stored in then block Reject is always going to store in catch block.
+
+                <pre>
+                    Example - 
+
+                    const printVariable = (str) => {
+                        return new Promise ((resolve, reject)=>{
+                            if (str=="yes"){
+                                resolve("Promise Resolved");
+                            }
+                            else{
+                                reject("Promise Rejected");
+                            }
+                        })
+                    }
+                
+                    printVariable("no")
+                       .then((response)=>{
+                           console.log(response);
+                       })
+                       .catch((error)=>{
+                           console.log(error);
+                       })
+                    
+                    //Promise Rejected
+                </pre>
+            </p>
+            <h5>Promise chaining -</h5>
+            <p>
+                Process of executing a sequence of asynchronous tasks one after another using promises is known as promise chaining.
+                
+                <pre>
+                    Example - 
+
+                    const printVariable = (time, value) => {
+                        return new Promise ((resolve, reject)=>{
+                            setTimeout(()=>{
+                                console.log(value);
+                                resolve()
+                            }, time);
+                        })
+                    }
+                    
+                    printVariable(1000, "1")
+                        .then(()=>printVariable(2000,"2"))
+                        .then(()=>printVariable(3000,"3"))
+                        .then(()=>printVariable(4000,"4"))
+                        .then(()=>printVariable(5000,"5"))
+                        .then(()=>printVariable(6000,"6"))
+                        .then(()=>printVariable(7000,"7"))
+                    
+                    //1
+                    //2
+                    //3
+                    //4
+                    //5
+                    //6
+                    //7
+                </pre>
+            </p>
+
+            <h4>Q 4 : How to use async and await keywords in asynchronous JS?</h4>
+            <p>
+                Async/Await is the extension of promises which we get as a support in the language. You can refer Promises in Javascript to know more about it. 
+                Async: It simply allows us to write promises based code as if it was synchronous and it checks that we are not breaking the execution thread.
+                Async and await is used to ignore promise chaining.
+
+                <pre>
+                    Example - 
+
+                    const printVariable = (time, value) => {
+                        return new Promise ((resolve, reject)=>{
+                            setTimeout(()=>{
+                                console.log(value);
+                                resolve()
+                            }, time);
+                        })
+                    }
+               
+                   async function print () {  
+                           await printVariable(6000, "A");
+                           await printVariable(5000, "E");
+                           await printVariable(3000, "I");
+                           await printVariable(2000, "O");
+                           await printVariable(4000, "U");
+                    }
+                    print()
+
+                    //A
+                    //E
+                    //I
+                    //O
+                    //U
+                </pre>
+            </p>
+        <script src="index14.js"></script>
+</body>
+</html>

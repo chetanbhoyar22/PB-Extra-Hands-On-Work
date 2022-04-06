@@ -49,3 +49,9 @@ JS 9 (Link) -  https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/D
 JS 10 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2010/index10.html
 
 JS 11 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2011/index11.html
+
+JS 12 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2012/index12.html
+
+JS 13 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2013/index13.html
+
+JS 14 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2014/index14.html
