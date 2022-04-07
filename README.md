@@ -55,3 +55,5 @@ JS 12 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/D
 JS 13 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2013/index13.html
 
 JS 14 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2014/index14.html
+
+JS 15 (Link) - https://chetanbhoyar22.github.io/PB-Extra-Hands-On-Work/3.%20JS/Day%20-%2015/index15.html
